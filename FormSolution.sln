@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{0DB56780-F729-452D-AD94-C027CF107396}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduler", "Scheduler\Scheduler.csproj", "{23918991-3A74-4E39-ADBB-E46B404A5A0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileCheck", "FileCheck\FileCheck.csproj", "{8A403650-ABE9-446E-84D5-6E7631057291}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DB56780-F729-452D-AD94-C027CF107396}.Debug|x86.ActiveCfg = Debug|x86
+		{0DB56780-F729-452D-AD94-C027CF107396}.Debug|x86.Build.0 = Debug|x86
+		{0DB56780-F729-452D-AD94-C027CF107396}.Release|x86.ActiveCfg = Release|x86
+		{0DB56780-F729-452D-AD94-C027CF107396}.Release|x86.Build.0 = Release|x86
+		{23918991-3A74-4E39-ADBB-E46B404A5A0C}.Debug|x86.ActiveCfg = Debug|x86
+		{23918991-3A74-4E39-ADBB-E46B404A5A0C}.Debug|x86.Build.0 = Debug|x86
+		{23918991-3A74-4E39-ADBB-E46B404A5A0C}.Release|x86.ActiveCfg = Release|x86
+		{23918991-3A74-4E39-ADBB-E46B404A5A0C}.Release|x86.Build.0 = Release|x86
+		{8A403650-ABE9-446E-84D5-6E7631057291}.Debug|x86.ActiveCfg = Debug|x86
+		{8A403650-ABE9-446E-84D5-6E7631057291}.Debug|x86.Build.0 = Debug|x86
+		{8A403650-ABE9-446E-84D5-6E7631057291}.Release|x86.ActiveCfg = Release|x86
+		{8A403650-ABE9-446E-84D5-6E7631057291}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
