@@ -34,29 +34,45 @@ namespace FileCheck
             this.gbFile1.AllowDrop = true;
             this.gbFile1.DoubleClick += new EventHandler(gbFile_DoubleClick);
             this.gbFile1.DragEnter += new DragEventHandler(gbFile_DragEnter);
+            this.gbFile1.DragDrop += new DragEventHandler(gbFile_DragDrop);
             this.gbFile2.AllowDrop = true;
             this.gbFile2.DoubleClick += gbFile_DoubleClick;
             this.gbFile2.DragEnter += gbFile_DragEnter;
+            this.gbFile2.DragDrop += new DragEventHandler(gbFile_DragDrop);
+        }
+
+        void gbFile_DragDrop(object sender, DragEventArgs e)
+        {
+            string fileName = ((string[])e.Data.GetData(DataFormats.FileDrop))[0];
+            ComputeAndPrint(sender, fileName);
         }
 
         void gbFile_DragEnter(object sender, DragEventArgs e)
         {
-            if ((sender as GroupBox).Name == "gbFile1")
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
-                fileName1 = GetFileName();
+                e.Effect = DragDropEffects.Link;
             }
-            if ((sender as GroupBox).Name == "gbFile2")
+            else
             {
-                fileName2 = GetFileName();
+                e.Effect = DragDropEffects.None;
             }
+            
+            
         }
 
         void gbFile_DoubleClick(object sender, EventArgs e)
         {
+            string fName = GetFileName();
+            ComputeAndPrint(sender, fName);
+        }
+
+        private void ComputeAndPrint(object sender, string fName)
+        {
             ComputeMD5andSHA1 computer = null;
             if ((sender as GroupBox).Name == "gbFile1")
             {
-                fileName1 = GetFileName();
+                fileName1 = fName;
                 if (string.IsNullOrEmpty(fileName1))
                 {
                     return;
@@ -64,13 +80,13 @@ namespace FileCheck
                 computer = new ComputeMD5andSHA1();
                 fileMD5_1 = computer.MD5File(fileName1);
                 fileSHA1_1 = computer.SHA1File(fileName1);
-                using (StreamReader sr = new StreamReader(fileName1,Encoding.GetEncoding("GB2312")))
+                using (StreamReader sr = new StreamReader(fileName1, Encoding.GetEncoding("GB2312")))
                 {
                     string str = sr.ReadToEnd();
                     fileCRC16_1 = CRCITU.GetCrc16(Encoding.UTF8.GetBytes(str)).ToString();
                     fileCRC32_1 = CRCITU.GetCrc32(Encoding.UTF8.GetBytes(str)).ToString();
                 }
-                
+
                 lblFileName1.Text = new FileInfo(fileName1).Name;
                 lblFileMD5_1.Text = fileMD5_1;
                 lblFileSHA1_1.Text = fileSHA1_1;
@@ -79,7 +95,7 @@ namespace FileCheck
             }
             if ((sender as GroupBox).Name == "gbFile2")
             {
-                fileName2 = GetFileName();
+                fileName2 = fName;
                 if (string.IsNullOrEmpty(fileName2))
                 {
                     return;
@@ -118,11 +134,6 @@ namespace FileCheck
         {
             this.Close();
             Application.Exit();
-        }
-
-        private void gbFile2_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCompare_Click(object sender, EventArgs e)

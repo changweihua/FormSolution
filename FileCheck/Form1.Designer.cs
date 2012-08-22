@@ -199,7 +199,6 @@
             this.gbFile2.TabIndex = 1;
             this.gbFile2.TabStop = false;
             this.gbFile2.Text = "文件2";
-            this.gbFile2.Enter += new System.EventHandler(this.gbFile2_Enter);
             // 
             // lblFileCRC32_2
             // 
@@ -307,7 +306,6 @@
             // Form1
             // 
             this.AcceptButton = this.btnCompare;
-            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
