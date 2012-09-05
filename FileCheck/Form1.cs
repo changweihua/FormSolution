@@ -39,7 +39,9 @@ namespace FileCheck
             this.gbFile2.DoubleClick += gbFile_DoubleClick;
             this.gbFile2.DragEnter += gbFile_DragEnter;
             this.gbFile2.DragDrop += new DragEventHandler(gbFile_DragDrop);
+            btnReset.Visible = false;
         }
+
 
         void gbFile_DragDrop(object sender, DragEventArgs e)
         {
@@ -117,6 +119,27 @@ namespace FileCheck
             }
         }
 
+
+        private void Reset()
+        {
+            foreach (Control ctl in this.Controls)
+            {
+                if (ctl is GroupBox)
+                {
+                    foreach (Control lbl in ctl.Controls)
+                    {
+                        if (lbl is Label)
+                        {
+                            if ((lbl as Label).Name.Contains("lblFile"))
+                            {
+                                (lbl as Label).Text = "";
+                            }
+                        }
+                    }
+                }              
+            }
+        }
+
         private string GetFileName()
         {
             DialogResult dr = this.openFileDialog1.ShowDialog();
@@ -138,14 +161,26 @@ namespace FileCheck
 
         private void btnCompare_Click(object sender, EventArgs e)
         {
+            btnReset.Visible = true;
+            DialogResult dr;
             if ((fileCRC16_1 == fileCRC16_2) && (fileCRC32_1 == fileCRC32_2) && (fileMD5_1 == fileMD5_2) && (fileSHA1_1 == fileSHA1_2))
             {
-                MessageBox.Show("左右两个文件一致", "信息提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                dr = MessageBox.Show("左右两个文件一致\r\n\r\n是否清除文件信息?", "信息提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("左右两个文件一致", "信息提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                dr=MessageBox.Show("左右两个文件不一致\r\n\r\n是否清除文件信息?", "信息提示", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             }
+            if (dr == DialogResult.Yes)
+            {
+                btnReset_Click(btnReset, null);
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Reset();
+            (sender as Button).Visible = false;
         }
 
     }
