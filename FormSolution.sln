@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileCheck", "FileCheck\File
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Browser", "Browser\Browser.csproj", "{66F213EE-0294-43E0-B32C-61943A13FDED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication2", "WindowsFormsApplication2\WindowsFormsApplication2.csproj", "{86E385F4-DF5D-4B5F-925C-E6AF65241774}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -31,6 +33,10 @@ Global
 		{66F213EE-0294-43E0-B32C-61943A13FDED}.Debug|x86.Build.0 = Debug|x86
 		{66F213EE-0294-43E0-B32C-61943A13FDED}.Release|x86.ActiveCfg = Release|x86
 		{66F213EE-0294-43E0-B32C-61943A13FDED}.Release|x86.Build.0 = Release|x86
+		{86E385F4-DF5D-4B5F-925C-E6AF65241774}.Debug|x86.ActiveCfg = Debug|x86
+		{86E385F4-DF5D-4B5F-925C-E6AF65241774}.Debug|x86.Build.0 = Debug|x86
+		{86E385F4-DF5D-4B5F-925C-E6AF65241774}.Release|x86.ActiveCfg = Release|x86
+		{86E385F4-DF5D-4B5F-925C-E6AF65241774}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
