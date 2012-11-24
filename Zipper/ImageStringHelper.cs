@@ -54,6 +54,12 @@ namespace Zipper
             return text;
         }
 
+        /// <summary>
+        /// 字符串转图片
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
         public static bool StringToImage(string text, string fileName)
         {
             bool isSuccess = false;
