@@ -29,6 +29,11 @@ namespace Zipper
     /// </summary>
     public class ImageStringHelper
     {
+        /// <summary>
+        /// 图片转字符串
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
         public static string ImageToString(string fileName)
         {
             string text = string.Empty;

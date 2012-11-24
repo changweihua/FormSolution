@@ -45,8 +45,6 @@
             this.itemContainer16 = new DevComponents.DotNetBar.ItemContainer();
             this.switchButtonItem5 = new DevComponents.DotNetBar.SwitchButtonItem();
             this.ribbonBar9 = new DevComponents.DotNetBar.RibbonBar();
-            this.itemContainer15 = new DevComponents.DotNetBar.ItemContainer();
-            this.switchButtonItem4 = new DevComponents.DotNetBar.SwitchButtonItem();
             this.ribbonBar8 = new DevComponents.DotNetBar.RibbonBar();
             this.itemContainer14 = new DevComponents.DotNetBar.ItemContainer();
             this.switchButtonItem3 = new DevComponents.DotNetBar.SwitchButtonItem();
@@ -172,6 +170,10 @@
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.itemContainer15 = new DevComponents.DotNetBar.ItemContainer();
+            this.itemContainer19 = new DevComponents.DotNetBar.ItemContainer();
+            this.switchButtonItem4 = new DevComponents.DotNetBar.SwitchButtonItem();
+            this.buttonItem30 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
@@ -413,21 +415,6 @@
             // 
             // 
             this.ribbonBar9.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // itemContainer15
-            // 
-            // 
-            // 
-            // 
-            this.itemContainer15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainer15.Name = "itemContainer15";
-            this.itemContainer15.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.switchButtonItem4});
-            // 
-            // switchButtonItem4
-            // 
-            this.switchButtonItem4.Name = "switchButtonItem4";
-            this.switchButtonItem4.Text = "选择项";
             // 
             // ribbonBar8
             // 
@@ -2015,6 +2002,38 @@
             this.labelX3.Text = "IPV4 地址";
             this.labelX3.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
+            // itemContainer15
+            // 
+            // 
+            // 
+            // 
+            this.itemContainer15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer15.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.itemContainer15.Name = "itemContainer15";
+            this.itemContainer15.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.itemContainer19,
+            this.buttonItem30});
+            // 
+            // itemContainer19
+            // 
+            // 
+            // 
+            // 
+            this.itemContainer19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer19.Name = "itemContainer19";
+            this.itemContainer19.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.switchButtonItem4});
+            // 
+            // switchButtonItem4
+            // 
+            this.switchButtonItem4.Name = "switchButtonItem4";
+            this.switchButtonItem4.Text = "选择项";
+            // 
+            // buttonItem30
+            // 
+            this.buttonItem30.Name = "buttonItem30";
+            this.buttonItem30.Text = "转换";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2192,13 +2211,15 @@
         private DevComponents.DotNetBar.SwitchButtonItem switchButtonItem3;
         private DevComponents.DotNetBar.ItemContainer itemContainer16;
         private DevComponents.DotNetBar.SwitchButtonItem switchButtonItem5;
-        private DevComponents.DotNetBar.ItemContainer itemContainer15;
-        private DevComponents.DotNetBar.SwitchButtonItem switchButtonItem4;
         private DevComponents.DotNetBar.ItemContainer itemContainer17;
         private DevComponents.DotNetBar.LabelItem labelItem4;
         private DevComponents.DotNetBar.ComboBoxItem comboBoxItem1;
         private DevComponents.DotNetBar.ItemContainer itemContainer18;
         private DevComponents.DotNetBar.SwitchButtonItem switchButtonItem6;
+        private DevComponents.DotNetBar.ItemContainer itemContainer15;
+        private DevComponents.DotNetBar.ItemContainer itemContainer19;
+        private DevComponents.DotNetBar.SwitchButtonItem switchButtonItem4;
+        private DevComponents.DotNetBar.ButtonItem buttonItem30;
     }
 }
 
