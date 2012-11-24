@@ -421,7 +421,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedTabFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
             this.tabControl1.SelectedTabIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(801, 209);
+            this.tabControl1.Size = new System.Drawing.Size(801, 218);
             this.tabControl1.Style = DevComponents.DotNetBar.eTabStripStyle.Metro;
             this.tabControl1.TabIndex = 1;
             this.tabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.MultilineWithNavigationBox;
@@ -436,7 +436,7 @@
             this.tabControlPanel1.Location = new System.Drawing.Point(0, 25);
             this.tabControlPanel1.Name = "tabControlPanel1";
             this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel1.Size = new System.Drawing.Size(801, 184);
+            this.tabControlPanel1.Size = new System.Drawing.Size(801, 193);
             this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
             this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
             this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(157)))), ((int)(((byte)(189)))));
@@ -458,7 +458,7 @@
             this.tabControlPanel2.Location = new System.Drawing.Point(0, 25);
             this.tabControlPanel2.Name = "tabControlPanel2";
             this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel2.Size = new System.Drawing.Size(801, 184);
+            this.tabControlPanel2.Size = new System.Drawing.Size(801, 193);
             this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
             this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
             this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(157)))), ((int)(((byte)(189)))));
@@ -482,7 +482,7 @@
             this.expandablePanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.expandablePanel1.Location = new System.Drawing.Point(5, 155);
             this.expandablePanel1.Name = "expandablePanel1";
-            this.expandablePanel1.Size = new System.Drawing.Size(154, 209);
+            this.expandablePanel1.Size = new System.Drawing.Size(154, 218);
             this.expandablePanel1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.expandablePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.expandablePanel1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -504,7 +504,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 366);
+            this.ClientSize = new System.Drawing.Size(971, 375);
             this.Controls.Add(this.expandablePanel1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.ribbonControl1);
