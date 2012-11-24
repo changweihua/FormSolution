@@ -252,6 +252,9 @@ namespace Zipper
 
             this.rtbBase64String.Visible = this.ribbonTabItem2.Checked;
             this.rtbBase64String.Dock = DockStyle.Fill;
+
+            this.networkToolPanel.Visible = this.ribbonTabItem4.Checked;
+            this.networkToolPanel.Dock = DockStyle.Fill;
         }
 
         private void imageStringCommand_Executed(object sender, EventArgs e)
