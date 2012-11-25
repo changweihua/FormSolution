@@ -39,17 +39,34 @@ namespace Zipper
             string text = string.Empty;
 
             ImgFormat imgFormat = new ImgFormat();
-            using (Image img = Image.FromFile(fileName))
+            //使用该方法，避免独占方式操作图片
+            using (FileStream fs = File.OpenRead(fileName))
             {
-                string extension = fileName.Substring(fileName.LastIndexOf('.'));
-                // MessageBox.Show(ImageFormat.Jpeg.ToString());
-                using (MemoryStream ms = new MemoryStream())
+                using (Image img = Image.FromStream(fs))
                 {
-                    img.Save(ms, imgFormat[extension]);
-                    text = Convert.ToBase64String(ms.GetBuffer());
+                    string extension = fileName.Substring(fileName.LastIndexOf('.'));
+                    // MessageBox.Show(ImageFormat.Jpeg.ToString());
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        img.Save(ms, imgFormat[extension]);
+                        text = Convert.ToBase64String(ms.GetBuffer());
 
+                    }
                 }
             }
+
+            //注释于 2012-11-25 21:53
+            //using (Image img = Image.FromFile(fileName))
+            //{
+            //    string extension = fileName.Substring(fileName.LastIndexOf('.'));
+            //    // MessageBox.Show(ImageFormat.Jpeg.ToString());
+            //    using (MemoryStream ms = new MemoryStream())
+            //    {
+            //        img.Save(ms, imgFormat[extension]);
+            //        text = Convert.ToBase64String(ms.GetBuffer());
+
+            //    }
+            //}
 
             return text;
         }
