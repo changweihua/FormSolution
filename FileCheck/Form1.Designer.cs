@@ -55,6 +55,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.gbFile1.SuspendLayout();
             this.gbFile2.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +76,7 @@
             // 
             // gbFile1
             // 
+            this.gbFile1.Controls.Add(this.comboBox1);
             this.gbFile1.Controls.Add(this.lblFileCRC32_1);
             this.gbFile1.Controls.Add(this.lblFileCRC16_1);
             this.gbFile1.Controls.Add(this.lblFileSHA1_1);
@@ -314,6 +316,14 @@
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(148, 71);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 20);
+            this.comboBox1.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnCompare;
@@ -368,6 +378,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
